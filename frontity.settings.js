@@ -34,6 +34,26 @@ const settings = {
               "/about-us/"
             ]
           ],
+          "leftMenu": [
+            [
+              'Portfolio',
+              '/portfolio',
+            ],
+            [
+              'Pricing',
+              '/pricing'
+            ]
+          ],
+          "rightMenu": [
+            [
+              'Concepts',
+              '/concepts'
+            ],
+            [
+              'About',
+              '/about'
+            ]
+          ],
           "featured": {
             "showOnList": true,
             "showOnPost": true
