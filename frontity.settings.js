@@ -2,7 +2,7 @@ const settings = {
   "name": "verlion",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://eyeofecho.com/",
       "title": "Test Frontity Blog",
       "description": "WordPress installation for Frontity development"
     }
@@ -18,8 +18,8 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "portfolio",
+              "/portfolio/"
             ],
             [
               "Travel",
@@ -35,8 +35,8 @@ const settings = {
             ]
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           }
         }
       }
@@ -45,8 +45,17 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
-        }
+          "url": "https://eyeofecho.com/",
+          "postTypes": [
+            {
+              "type": "portfolio", // type slug
+              "endpoint": "portfolio",
+              "archive": "/portfolio"
+            }
+          ],
+        },
+
+
       }
     },
     "@frontity/tiny-router",
@@ -54,4 +63,4 @@ const settings = {
   ]
 };
 
-export default settings;
+export default settings

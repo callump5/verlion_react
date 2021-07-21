@@ -22,19 +22,29 @@ const List = ({ state }) => {
           Author: <b>{decode(state.source.author[data.id].name)}</b>
         </Header>
       )}
+      <Grid>
 
-      {/* Iterate over the items of the list. */}
-      {data.items.map(({ type, id }) => {
-        const item = state.source[type][id];
-        // Render one Item component for each one.
-        return <Item key={item.id} item={item} />;
-      })}
+        {/* Iterate over the items of the list. */}
+        {data.items.map(({ type, id }) => {
+          const item = state.source[type][id];
+          // Render one Item component for each one.
+          return <Item key={item.id} item={item} />;
+        })}
+
+      </Grid>
       <Pagination />
     </Container>
   );
 };
 
 export default connect(List);
+
+
+const Grid = styled.div`
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+`
 
 const Container = styled.section`
   width: 800px;

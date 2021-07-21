@@ -1,5 +1,6 @@
 import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
+import Video from "./video";
 
 /**
  * The Component that renders a featured media, typically an image. The featured
@@ -49,9 +50,13 @@ const Container = styled.div`
   ${({ isAmp }) => isAmp && "position: relative;"};
 `;
 
+
 const StyledImage = styled(Image)`
   display: block;
   height: 100%;
   width: 100%;
+  max-width: 100px;
+  max-height: 100px;
   object-fit: cover;
 `;
+

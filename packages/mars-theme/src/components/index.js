@@ -21,6 +21,7 @@ const Theme = ({ state }) => {
 
   return (
     <>
+    
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>

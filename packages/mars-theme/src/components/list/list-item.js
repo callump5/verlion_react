@@ -1,6 +1,7 @@
 import { connect, styled } from "frontity";
 import Link from "../link";
 import FeaturedMedia from "../featured-media";
+import VideoPlayer from '../video';
 
 /**
  * Item Component
@@ -13,7 +14,6 @@ import FeaturedMedia from "../featured-media";
 const Item = ({ state, item }) => {
   const author = state.source.author[item.author];
   const date = new Date(item.date);
-
   return (
     <article>
       <Link link={item.link}>
@@ -40,7 +40,10 @@ const Item = ({ state, item }) => {
        * list of featured posts, we render the media.
        */}
       {state.theme.featured.showOnList && (
-        <FeaturedMedia id={item.featured_media} />
+        <div>
+          <FeaturedMedia id={item.featured_media}/>
+          <VideoPlayer src={item.myfield} ></VideoPlayer>
+        </div>
       )}
 
       {/* If the post has an excerpt (short summary text), we render it */}

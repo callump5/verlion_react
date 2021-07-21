@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
+import VideoPlayer from "./video";
 import FeaturedMedia from "./featured-media";
 
 /**
@@ -33,6 +34,8 @@ const Post = ({ state, actions, libraries }) => {
   // Get a human readable date.
   const date = new Date(post.date);
 
+
+  console.log(post);
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
 
@@ -72,7 +75,10 @@ const Post = ({ state, actions, libraries }) => {
 
       {/* Look at the settings to see if we should include the featured image */}
       {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
+        <div>
+          <FeaturedMedia id={post.featured_media} />
+          <VideoPlayer src={post.myfield}></VideoPlayer>
+        </div>
       )}
 
       {data.isAttachment ? (
