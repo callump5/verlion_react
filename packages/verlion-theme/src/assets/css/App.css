@@ -1,0 +1,23 @@
+#root,
+#verlion-particles,
+#verlion-particles canvas,
+body {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow-y: scroll;
+}
+
+#verlion-particles {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+
+}         
+
+body {
+    background-image: url('https://eyeofecho.com/wp-content/uploads/2021/03/Background-Red-NOEYE-1-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}

@@ -9,7 +9,7 @@ const settings = {
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "verlion-theme",
       "state": {
         "theme": {
           "menu": [
@@ -73,6 +73,10 @@ const settings = {
               "archive": "/portfolio"
             }
           ],
+          "params": {
+            "per_page": 100,
+            // type: ["post", "page"],
+          },
         },
 
 
